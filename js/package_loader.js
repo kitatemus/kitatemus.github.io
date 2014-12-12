@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     // append a div for the thumbnail and text
     $(".thumbs.row").last().append('\
-    <div id="'+folder+'-thumb" class="three columns">\
+    <div id="'+folder+'-thumb" class="nine columns">\
     \
     <a href="#">\
     <img id="'+folder+'" class="thumb" src=' + thumb_path + ' width="100%">\
