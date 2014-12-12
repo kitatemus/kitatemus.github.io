@@ -38,7 +38,7 @@ $(document).ready(function() {
 
     // get the info for the full page version
     full_path = "images-packaging/" + folder + "/full.png"
-    full_text_path = "images-packaging/" + folder + "/full_text.png"
+    full_text_path = "images-packaging/" + folder + "/full_text.txt"
 
     // append a div for the image and text
     $("#fulls").append('\
