@@ -72,6 +72,6 @@ $(document).ready(function() {
     // show the image and text
     $("#thumbnails").show();
     // change the location to the image
-
+    //TODO
   });
 });
