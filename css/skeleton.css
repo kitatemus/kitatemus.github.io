@@ -64,7 +64,7 @@
   .container .one.column {width: 100%;}
   .container .one.columns          { width: 4.66666666667%; }
   .container .two.columns          { width: 13.3333333333%; }
-  .container .three.columns        { width: 30%;            }
+  .container .three.columns        { width: 100%;           }
   .container .four.columns         { width: 30.6666666667%; }
   .container .five.columns         { width: 39.3333333333%; }
   .container .six.columns          { width: 48%;            }
