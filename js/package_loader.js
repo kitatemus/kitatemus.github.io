@@ -1,3 +1,12 @@
+function UrlExists(url)
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+}
+
+
 // when the document has been loaded
 $(document).ready(function() {
 
@@ -20,13 +29,13 @@ $(document).ready(function() {
 
     // append a div for the thumbnail and text
     $(".thumbs.row").last().append('\
-    <div id="'+folder+'-thumb" class="three columns">\
-    \
-    <a href="#">\
-    <img id="'+folder+'" class="thumb" src=' + thumb_path + ' width="100%">\
-    </a>\
-    <p class="'+folder+'-thumb alt-text"></p>\
-    </div>\
+      <div id="'+folder+'-thumb" class="three columns">\
+      \
+      <a href="#">\
+      <img id="'+folder+'" class="thumb" src=' + thumb_path + ' width="100%">\
+      </a>\
+      <p class="'+folder+'-thumb alt-text"></p>\
+      </div>\
     ');
 
     $("p."+folder+"-thumb.alt-text").load(alt_text_path);
@@ -38,20 +47,35 @@ $(document).ready(function() {
     }
 
     // get the info for the full page version
-    full_path = "images-packaging/" + folder + "/full.png"
-    full_text_path = "images-packaging/" + folder + "/full_text.txt"
+    full_path = "images-packaging/" + folder + "/full.png";
+    full_text_path = "images-packaging/" + folder + "/full_text.txt";
+
 
     // append a div for the image and text
     $("#fulls").append('\
-    <div id="'+folder+'-full" class="full-images one column">\
-    \
-    <img class="thumb" src=' + full_path + ' width="100%">\
-    <p class="'+folder+'-full full-text"></p>\
-    <a class="back-button" href="#">back</a>\
-    </div>\
+      <div id="'+folder+'-full" class="full-images one column">\
+      \
+      <img class="full-image" src=' + current_path + ' width="100%">\
+      <p class="'+folder+'-full full-text"></p>\
+      </div>\
     ')
 
+    // try to pull in other images (e.g. full1.png, full2.png, etc...)
+    full_path_part = "images-packaging/" + folder + "/full";
+    current_img = 1;
+    current_path = full_path_part + current_img + ".png";
+    while ( UrlExists(current_path) ) {
+
+      $("#"+folder+"-full").append('\
+        <img class="full-image" src=' + current_path + ' width="100%">\
+      ')
+
+      current_img = current_img + 1;
+      current_path = full_path_part + current_img + ".png";
+    }
+
     $("p."+folder+"-full.full-text").load(full_text_path);
+    $("#"+folder+"-full").append('<a class="back-button" href="#">back</a>');
 
   });
 
