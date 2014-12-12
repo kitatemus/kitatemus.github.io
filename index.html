@@ -27,11 +27,16 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
 
+  <!-- Javascript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/jquery.js"></script>
+  <script src="js/package_loader.js"></script>
+
 </head>
 <body>
 <!-- Logo Header -->
 
-  <div class="container_header">
+  <div class="container_header" id="logo">
     <div class="three columns">
       <img src="images/work/full/logo.png" width="25%">
     </div>
@@ -49,63 +54,9 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <div class="container">
-    <div class="row">
-      <div class="three columns" style="margin-top: 25%">
+  <div id="thumbnails" class="container"></div>
+  <div id="fulls" class="container"></div>
 
-
-
-        <img src="images/work/thumbs/image-01.png" width="100%">
-        <p>Album Cover Design for Dead Witch</p>
-      </div>
-
-      <div class="three columns" style="margin-top: 25%">
-        <img src="images/work/thumbs/image-02.png" width="100%">
-
-        <p>This index.html page is a placeholder</p>
-      </div>
-      <div class="three columns" style="margin-top: 25%">
-        <img src="images/work/thumbs/image-03.png" width="100%">
-
-        <p>This index.html page is a placeholder with the CSS</p>
-      </div>
-
-    </div>
-    <div class="row">
-      <div class="three columns" >
-        <img src="images/work/thumbs/image-04.png" width="100%">
-
-        <p>This index.html page is a placeholder</p>
-      </div>
-      <div class="three columns" >
-        <img src="images/work/thumbs/image-05.png" width="100%">
-
-        <p>This index.html page is a placeholder</p>
-      </div>
-      <div class="three columns" >
-        <img src="images/work/thumbs/image-06.png" width="100%">
-
-        <p>This index.html page is a placeholder with the </p>
-      </div>
-    </div>
-     <div class="row">
-      <div class="three columns" >
-        <img src="images/work/thumbs/image-07.png" width="100%">
-
-        <p>This index.html page is a placeholder with the</p>
-      </div>
-      <div class="three columns" >
-        <img src="images/work/thumbs/image-08.png" width="100%">
-
-      <p>This index.html page is a placeholder with the</p>
-    </div>
-    <div class="three columns" >
-      <img src="images/work/thumbs/image-09.png" width="100%">
-      <p>This page is not finished</p>
-
-      </div>
-    </div>
-  </div>
 
   <!-- Form Section -->
 
@@ -133,7 +84,10 @@
     </label>
     <input class="button-primary" type="submit" value="Submit">
   </form>
+<<<<<<< HEAD
   
+=======
+>>>>>>> FETCH_HEAD
   <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
 
   <!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
