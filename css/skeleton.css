@@ -59,7 +59,7 @@
 
   .container .column,
   .container .columns {
-    margin-left: 4%; }
+    margin-left: 100%; }
 
   .container .one.column {width: 100%;}
   .container .one.columns          { width: 4.66666666667%; }
