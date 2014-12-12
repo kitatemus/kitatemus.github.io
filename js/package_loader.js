@@ -5,7 +5,8 @@ $(document).ready(function() {
   var folders = [ "dead-witch",
                   "dogtown",
                   "dead-witch2",
-                  "dogtown2"];
+                  "dogtown2"
+                  "forge"];
 
   // add the initial row (where the images will sit)
   $("#thumbnails").last().append('<div class="thumbs row packaging">');
@@ -19,7 +20,7 @@ $(document).ready(function() {
 
     // append a div for the thumbnail and text
     $(".thumbs.row").last().append('\
-    <div id="'+folder+'-thumb" class="nine columns">\
+    <div id="'+folder+'-thumb" class="three columns">\
     \
     <a href="#">\
     <img id="'+folder+'" class="thumb" src=' + thumb_path + ' width="100%">\
