@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     // append a div for the image and text
     $("#fulls").append('\
-    <div id="'+folder+'-full" class="full-images one columns">\
+    <div id="'+folder+'-full" class="full-images one column">\
     \
     <img class="thumb" src=' + full_path + ' width="100%">\
     <p class="'+folder+'-full full-text"></p>\
