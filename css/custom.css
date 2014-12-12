@@ -2,7 +2,6 @@ ul {
 
 ul li{
   display: inline;
-  list-style-type: none;
   margin-left: 25px;
   padding-top: 20%;
      }
