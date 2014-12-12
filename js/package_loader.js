@@ -19,12 +19,14 @@ $(document).ready(function() {
 
     // append a div for the thumbnail and text
     $(".thumbs.row").last().append('\
-    <div class="three columns">\
+    <div id="'+folder+'-thumb" class="three columns">\
     \
     <img src=' + thumb_path + ' width="100%">\
-    <p>' + $.get(alt_text_path) + '</p>\
+    <p class="'+folder+'-thumb alt-text"></p>\
     </div>\
-    ')
+    ');
+
+    $("p."+folder+"-thumb.alt-text").load(alt_text_path);
 
     // if this is the last image in a row
     if (index%3 == 2) {
