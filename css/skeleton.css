@@ -162,7 +162,7 @@ input[type="button"] {
   display: inline-block;
   background-color: transparent;
   border-radius: 4px;
-  color: black;
+  color: #555;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -196,7 +196,7 @@ input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
   border-color: #33C3F0;
-  background-color: #33C3F0; }
+  background-color: black; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
