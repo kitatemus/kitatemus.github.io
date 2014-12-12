@@ -195,7 +195,6 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  border-color: none;
   background-color: black; }
 .button.button-primary:hover,
 button.button-primary:hover,
