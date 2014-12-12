@@ -55,7 +55,7 @@ $(document).ready(function() {
     $("#fulls").append('\
       <div id="'+folder+'-full" class="full-images one column">\
       \
-      <img class="full-image" src=' + current_path + ' width="100%">\
+      <img class="full-image" src=' + full_path + ' width="100%">\
       <p class="'+folder+'-full full-text"></p>\
       </div>\
     ')
@@ -64,12 +64,15 @@ $(document).ready(function() {
     full_path_part = "images-packaging/" + folder + "/full";
     current_img = 1;
     current_path = full_path_part + current_img + ".png";
+    // while we still have images to load
     while ( UrlExists(current_path) ) {
 
+      // append those images to the div
       $("#"+folder+"-full").append('\
         <img class="full-image" src=' + current_path + ' width="100%">\
       ')
 
+      // bump up the image number
       current_img = current_img + 1;
       current_path = full_path_part + current_img + ".png";
     }
