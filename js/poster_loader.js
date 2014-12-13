@@ -10,22 +10,18 @@ function UrlExists(url)
 // when the document has been loaded
 $(document).ready(function() {
 
-  // for every packaging folder
-  var folders = [ "dead-witch",
-                  "dogtown",
-                  "dead-witch2",
-                  "dogtown2",
-                  "forge"];
+  // for every posters folder
+  var folders = [ ];
 
   // add the initial row (where the images will sit)
-  $("#thumbnails").last().append('<div class="thumbs row packaging">');
+  $("#thumbnails").last().append('<div class="thumbs row posters">');
 
-  // iterate through each packaging folder
+  // iterate through each posters folder
   $.each( folders, function(index,folder) {
 
     // get the package info
-    thumb_path = "images-packaging/" + folder + "/thumb.png";
-    alt_text_path = "images-packaging/" + folder + "/alt_text.txt";
+    thumb_path = "images-posters/" + folder + "/thumb.png";
+    alt_text_path = "images-posters/" + folder + "/alt_text.txt";
 
     // append a div for the thumbnail and text
     $(".thumbs.row").last().append('\
@@ -43,12 +39,12 @@ $(document).ready(function() {
     // if this is the last image in a row
     if (index%3 == 2) {
       // start the next row
-      $("#thumbnails").last().append('<div class="thumbs row packaging">');
+      $("#thumbnails").last().append('<div class="thumbs row posters">');
     }
 
     // get the info for the full page version
-    full_path = "images-packaging/" + folder + "/full.png";
-    full_text_path = "images-packaging/" + folder + "/full_text.txt";
+    full_path = "images-posters/" + folder + "/full.png";
+    full_text_path = "images-posters/" + folder + "/full_text.txt";
 
 
     // append a div for the image and text
@@ -61,7 +57,7 @@ $(document).ready(function() {
     ')
 
     // try to pull in other images (e.g. full1.png, full2.png, etc...)
-    full_path_part = "images-packaging/" + folder + "/full";
+    full_path_part = "images-posters/" + folder + "/full";
     current_img = 1;
     current_path = full_path_part + current_img + ".png";
     // while we still have images to load
