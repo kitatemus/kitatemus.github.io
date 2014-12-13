@@ -9,6 +9,7 @@ li {
 #logo {
   padding-top: 3%;
   padding-left: 10%;
+  float: left;
 }
 
 a {
