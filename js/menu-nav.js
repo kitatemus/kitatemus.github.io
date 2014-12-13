@@ -8,4 +8,11 @@ $(document).ready(function() {
 
     $("#submit-form").show();
   });
+
+  $("#form-back").click( function() {
+    $("#thumbnails").show();
+    $("#fulls").show();
+
+    $("#submit-form").hide();
+  });
 });
