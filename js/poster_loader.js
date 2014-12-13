@@ -89,7 +89,7 @@ $(document).ready(function() {
     // change the location of the page
     //TODO
   });
-  $("a.back-button").click(function() {
+  $("a.poster-back-button").click(function() {
     // hide all the thumbnails
     $(".full-images").hide();
     // show the image and text
