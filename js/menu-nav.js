@@ -4,14 +4,13 @@ $(document).ready(function() {
 
   $("#about-me-button").click( function() {
     $("#thumbnails").hide();
-    $("#fulls").hide();
+    $(".full-images").hide();
 
     $("#submit-form").show();
   });
 
   $("#form-back").click( function() {
     $("#thumbnails").show();
-    $("#fulls").show();
 
     $("#submit-form").hide();
   });
