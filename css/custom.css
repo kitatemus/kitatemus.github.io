@@ -12,14 +12,19 @@ li {
 }
 
 #logo {
-  
+
 }
 
 #navigation {
-
+  float: right;
+  padding-right: 13%;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+a.menu-button {
+  padding-right: 15%;
 }
