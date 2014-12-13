@@ -1,16 +1,30 @@
 .container {
-  margin-top: 20%;
+  margin-top: 15%;
 }
 
 li {
   width: 150px;
 }
 
+#header {
+  padding-top: 3%;
+  padding-left: 10%;
+}
+
 #logo {
-  padding-top: 30px;
+
+}
+
+#navigation {
+  float: right;
+  padding-right: 13%;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+a.menu-button {
+  padding-right: 15%;
 }
