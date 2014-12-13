@@ -20,14 +20,14 @@ $(document).ready(function() {
   });
 
   $("#about-me-button").click( function() {
-    $("#thumbnails").hide();
+    $(".thumbs.row").hide();
     $(".full-images").hide();
 
     $("#submit-form").show();
   });
 
   $("#form-back").click( function() {
-    $("#thumbnails").show();
+    $(".thumbs.row").show();
 
     $("#submit-form").hide();
   });
