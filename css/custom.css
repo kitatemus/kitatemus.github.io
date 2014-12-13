@@ -6,10 +6,17 @@ li {
   width: 150px;
 }
 
-#logo {
+#header {
   padding-top: 3%;
   padding-left: 10%;
-  float: left;
+}
+
+#logo {
+  
+}
+
+#navigation {
+
 }
 
 a {
