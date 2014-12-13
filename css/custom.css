@@ -1,5 +1,5 @@
 .container {
-  padding-top: 20%;
+  margin-top: 20%;
 }
 
 li {
@@ -7,7 +7,7 @@ li {
 }
 
 #logo {
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 a {
