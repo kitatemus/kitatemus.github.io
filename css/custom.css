@@ -1,14 +1,13 @@
 ul {
-
   list-style-type: none;
   margin-right: 25px;
   padding-top: 20%;
-
 }
 
 li {
   width: 150px;
 }
 
-
-/*style="margin-top: 5%" "margin-left: 5%"
+#logo {
+  padding-top: 35px;
+}
