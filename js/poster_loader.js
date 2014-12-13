@@ -11,7 +11,11 @@ function UrlExists(url)
 $(document).ready(function() {
 
   // for every posters folder
-  var folders = [ ];
+  var folders = [ "america",
+                  "japan",
+                  "children",
+                  "black-metal"];
+
 
   // add the initial row (where the images will sit)
   $("#thumbnails").last().append('<div class="thumbs row posters">');
