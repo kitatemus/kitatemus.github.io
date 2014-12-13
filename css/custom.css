@@ -38,5 +38,6 @@ a.menu-button {
 }
 
 img {
-  max-height: 75%;
+  max-height: 610px;
+  width: auto;
 }
