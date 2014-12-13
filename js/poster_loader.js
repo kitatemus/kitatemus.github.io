@@ -74,7 +74,7 @@ $(document).ready(function() {
     }
 
     $("p."+folder+"-full.full-text").load(full_text_path);
-    $("#"+folder+"-full").append('<a class="back-button" href="#">back</a>');
+    $("#"+folder+"-full").append('<a class="poster-back-button" href="#">back</a>');
 
   });
 
@@ -83,7 +83,7 @@ $(document).ready(function() {
   // when you click on a thumb in a row
   $("img.thumb").click(function() {
     // hide all the thumbnails
-    $("#thumbnails").hide();
+    $(".thumbs.row.posters").hide();
     // show the image and text
     $("#"+this.id+"-full").show()
     // change the location of the page
@@ -93,7 +93,7 @@ $(document).ready(function() {
     // hide all the thumbnails
     $(".full-images").hide();
     // show the image and text
-    $("#thumbnails").show();
+    $(".thumbs.row.posters").show();
     // change the location to the image
     //TODO
   });
