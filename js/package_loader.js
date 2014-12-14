@@ -28,11 +28,11 @@ $(document).ready(function() {
     // append a div for the thumbnail and text
     $(".thumbs.row").last().append('\
       <div id="'+folder+'-thumb" class="three columns">\
-      \
-      <a href="#">\
-      <img id="'+folder+'" class="thumb" src=' + thumb_path + ' width="100%">\
-      </a>\
-      <p class="'+folder+'-thumb alt-text"></p>\
+        \
+        <a href="#">\
+          <img id="'+folder+'" class="thumb" src=' + thumb_path + ' width="100%">\
+        </a>\
+        <p class="'+folder+'-thumb alt-text"></p>\
       </div>\
     ');
 
@@ -51,9 +51,8 @@ $(document).ready(function() {
 
     // append a div for the image and text
     $("#fulls").append('\
-      <div id="'+folder+'-full" class="full-images">\
+      <div id="'+folder+'-full" class="full-images row">\
         <div class="'+folder+'-full image-container eight columns">\
-        \
           <img class="full-image" src=' + full_path + ' width="100%">\
         </div>\
         <div class="four columns">\
