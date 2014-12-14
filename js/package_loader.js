@@ -52,7 +52,7 @@ $(document).ready(function() {
     // append a div for the image and text
     $("#fulls").append('\
       <div id="'+folder+'-full" class="full-images">\
-        <div class="image-container eight columns">\
+        <div class="'+folder+'-full image-container eight columns">\
         \
           <img class="full-image" src=' + full_path + ' width="100%">\
         </div>\
@@ -70,7 +70,7 @@ $(document).ready(function() {
     while ( UrlExists(current_path) ) {
 
       // append those images to the div
-      $("#"+folder+"-full").append('\
+      $("."+folder+"-full image-container").append('\
         <img class="full-image" src=' + current_path + ' width="100%">\
       ')
 
