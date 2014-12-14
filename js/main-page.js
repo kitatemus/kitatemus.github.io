@@ -27,7 +27,7 @@ $(document).ready(function() {
   });
 
   $("#form-back").click( function() {
-    $(".thumbs.row").show();
+    $(".thumbs.row.packaging").show();
 
     $("#submit-form").hide();
   });
