@@ -81,7 +81,9 @@ $(document).ready(function() {
     }
 
     $("p."+folder+"-full.full-text").load(full_text_path);
-    $("#"+folder+"-full").append('<a class="poster-back-button" href="#">back</a>');
+    $("."+folder+"-full.image-container").append('\
+      <a class="poster-back-button" href="#">back</a>\
+    ');
 
   });
 
