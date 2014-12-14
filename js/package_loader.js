@@ -58,7 +58,7 @@ $(document).ready(function() {
         </div>\
         <div class="four columns">\
           <p class="'+folder+'-full full-text"></p>\
-        </div>
+        </div>\
       </div>\
     ')
 
