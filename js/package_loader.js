@@ -51,10 +51,14 @@ $(document).ready(function() {
 
     // append a div for the image and text
     $("#fulls").append('\
-      <div id="'+folder+'-full" class="full-images eight columns">\
-      \
-      <img class="full-image" src=' + full_path + ' width="100%">\
-      <p class="'+folder+'-full full-text"></p>\
+      <div id="'+folder+'-full" class="full-images">\
+        <div class="eight columns">\
+        \
+          <img class="full-image" src=' + full_path + ' width="100%">\
+        </div>\
+        <div class="four columns">\
+          <p class="'+folder+'-full full-text"></p>\
+        </div>
       </div>\
     ')
 
