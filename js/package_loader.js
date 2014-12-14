@@ -80,7 +80,7 @@ $(document).ready(function() {
 
     $("p."+folder+"-full.full-text").load(full_text_path);
     $("."+folder+"-full.image-container").append('\
-      <a class="poster-back-button" href="#">back</a>\
+      <a class="packaging-back-button" href="#">back</a>\
     ');
 
   });
