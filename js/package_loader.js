@@ -70,7 +70,7 @@ $(document).ready(function() {
     while ( UrlExists(current_path) ) {
 
       // append those images to the div
-      $("."+folder+"-full image-container").append('\
+      $("."+folder+"-full.image-container").append('\
         <img class="full-image" src=' + current_path + ' width="100%">\
       ')
 
