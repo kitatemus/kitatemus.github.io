@@ -53,11 +53,14 @@ $(document).ready(function() {
 
     // append a div for the image and text
     $("#fulls").append('\
-      <div id="'+folder+'-full" class="full-images one column">\
-      \
-      <img class="full-image" src=' + full_path + ' width="100%">\
-      <p class="'+folder+'-full full-text"></p>\
+    <div id="'+folder+'-full" class="full-images">\
+      <div class="'+folder+'-full image-container eight columns">\
+        <img class="full-image" src=' + full_path + ' width="100%">\
       </div>\
+      <div class="four columns">\
+        <p class="'+folder+'-full full-text"></p>\
+      </div>\
+    </div>\
     ')
 
     // try to pull in other images (e.g. full1.png, full2.png, etc...)
@@ -68,7 +71,7 @@ $(document).ready(function() {
     while ( UrlExists(current_path) ) {
 
       // append those images to the div
-      $("#"+folder+"-full").append('\
+      $("."+folder+"-full.image-container").append('\
         <img class="full-image" src=' + current_path + ' width="100%">\
       ')
 
