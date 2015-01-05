@@ -13,7 +13,7 @@ $(document).ready(function() {
   // for every packaging folder
   var folders = [ "owl-house",
                   "dogtown",
-                  "forge"
+                  "forge",
                   "dead-witch"];
 
   // add the initial row (where the images will sit)
