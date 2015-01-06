@@ -11,7 +11,8 @@ function UrlExists(url)
 $(document).ready(function() {
 
   // for every packaging folder
-  var folders = [ "owl-house",
+  var folders = [ "wegmans",
+                  "owl-house",
                   "dogtown",
                   "forge",
                   "dead-witch"];
