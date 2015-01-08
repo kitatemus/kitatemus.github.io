@@ -83,7 +83,7 @@ $(document).ready(function() {
 
     $("p."+folder+"-full.full-text").load(full_text_path);
     $("."+folder+"-full.image-container").append('\
-      <a class="poster-back-button" href="#">back</a>\
+      <a class="poster-back-button" href="#" onclick="back_button()">back</a>\
     ');
 
   });
@@ -97,14 +97,6 @@ $(document).ready(function() {
     // show the image and text
     $("#"+this.id+"-full").show()
     // change the location of the page
-    //TODO
-  });
-  $("a.poster-back-button").click(function() {
-    // hide all the thumbnails
-    $(".full-images").hide();
-    // show the image and text
-    $(".thumbs.row.posters").show();
-    // change the location to the image
     //TODO
   });
 });
