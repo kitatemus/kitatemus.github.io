@@ -40,5 +40,5 @@ function nav_content_switcher(type) {
 
 // when the document has been loaded
 document.addEventListener('DOMContentLoaded', function(){
-  nav_content_switcher('posters')
+  nav_content_switcher('packaging')
 });
