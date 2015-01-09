@@ -140,7 +140,7 @@ function folder_loaders(root, folders) {
     back_button.setAttribute("class", root+"-back-button");
     back_button.setAttribute("href", "#");
     back_button.setAttribute("onclick", "back_button()");
-    back_button.innterHTML = "back";
+    back_button.textContent = "back";
 
     append_last("."+folder+"-full.text-container", back_button);
 
