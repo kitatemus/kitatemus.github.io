@@ -8,8 +8,7 @@ back_button = function(){};
 set_display_selector = function(selector, display) {
   ele = document.querySelectorAll(selector);
   Array.prototype.forEach.call(ele, function(e) {
-    console.log(display);
-    ele.style.display = display;
+    e.style.display = display;
   });
 }
 
