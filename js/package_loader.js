@@ -22,7 +22,7 @@ function UrlExists(url) {
 }
 
 // function to select a thumbnail
-function select_thumb() {
+function select_thumb(folder) {
 
   // hide all the thumbnails
   var thumbs = document.querySelectorAll(".thumbs.row.packaging");
@@ -31,7 +31,7 @@ function select_thumb() {
   });
 
   // show the image and text
-  document.querySelector("#"+this.id+"-full").style.display = '';
+  document.querySelector("#"+folder+"-full").style.display = '';
 
   // change the location of the page
   //TODO
@@ -72,7 +72,7 @@ function folder_loaders(root, folders) {
     new_element.setAttribute('id', folder+'-thumb');
     new_element.innerHTML = '\
       <a href="#">\
-        <img id="'+folder+'" class="thumb" src=' + thumb_path + ' onclick="select_thumb()" width="100%">\
+        <img id="'+folder+'" class="thumb" src=' + thumb_path + ' onclick="select_thumb(\''+folder+'\')" width="100%">\
       </a>\
       <p class="'+folder+'-thumb alt-text"></p>\
     ';
