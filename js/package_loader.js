@@ -125,7 +125,7 @@ function folder_loaders(root, folders) {
 
     // load in the full_text
     var full_text_loader = new XMLHttpRequest();
-    full_text_loader.open("GET",alt_text_path,true);
+    full_text_loader.open("GET",full_text_path,true);
     full_text_loader.send();
 
     full_text_loader.onreadystatechange = function() {
