@@ -6,7 +6,7 @@ back_button = function(){};
  * param: display should be either 'none' (to hide) or '' (to show)
  */
 set_selector_display = function(selector, display) {
-  ele = document.querySelectorAll(selector);
+  var ele = document.querySelectorAll(selector);
   Array.prototype.forEach.call(ele, function(e) {
     e.style.display = display;
   });
