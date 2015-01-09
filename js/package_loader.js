@@ -77,7 +77,9 @@ function folder_loaders(root, folders) {
     // if this is the last image in a row
     if (index%3 == 2) {
       // start the next row
-      append_last("#thumbnails", init_row)
+      var next_row = document.createElement('div');
+      next_row.setAttribute('class', 'thumbs row ' + root );
+      append_last("#thumbnails", next_row)
     }
 
     // get the info for the full page version
@@ -126,7 +128,7 @@ function folder_loaders(root, folders) {
     full_text_loader.open("GET",alt_text_path,true);
     full_text_loader.send();
 
-    alt_text_loader.onreadystatechange = function() {
+    full_text_loader.onreadystatechange = function() {
       if (this.readyState== 4 && this.status == 200){
         full_element = document.querySelector("p."+folder+"-full.full-text");
         full_element.innerHTML = this.responseText;
