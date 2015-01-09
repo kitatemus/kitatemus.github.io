@@ -36,7 +36,10 @@ function append_last(selector, element) {
 function folder_loaders(root, folders) {
 
   // add the initial row (where the images will sit)
-  append_last("#thumbnails", '<div class="thumbs row '+ root +'">');
+  var init_row = document.createElement('div');
+  init_row.setAttribute('class', 'thumbs row ' + root );
+
+  append_last("#thumbnails", init_row);
 
   // iterate through each packaging folder
   Array.prototype.forEach.call( folders, function(folder, index) {
@@ -46,14 +49,14 @@ function folder_loaders(root, folders) {
     var alt_text_path = "images-" + root + "/" + folder + "/alt_text.txt";
 
     // div with thumb and text
-    var new_element = '\
-      <div id="'+folder+'-thumb" class="three columns">\
-        \
-        <a href="#">\
-          <img id="'+folder+'" class="thumb" src=' + thumb_path + ' width="100%">\
-        </a>\
-        <p class="'+folder+'-thumb alt-text"></p>\
-      </div>\
+    var new_element = document.createElement('div');
+    new_element.setAttribute('class', "three columns");
+    new_element.setAttribute('id', folder+'-thumb');
+    new_element.innerHTML = '\
+      <a href="#">\
+        <img id="'+folder+'" class="thumb" src=' + thumb_path + ' width="100%">\
+      </a>\
+      <p class="'+folder+'-thumb alt-text"></p>\
     ';
 
     // append the div
@@ -74,22 +77,23 @@ function folder_loaders(root, folders) {
     // if this is the last image in a row
     if (index%3 == 2) {
       // start the next row
-      append_last("#thumbnails", '<div class="thumbs row ' + root + '">')
+      append_last("#thumbnails", init_row)
     }
 
     // get the info for the full page version
     var full_path = "images-" + root + "/" + folder + "/full.png";
     var full_text_path = "images-" + root + "/" + folder + "/full_text.txt";
 
-    // append a div for the image and text
-    new_element = '\
-      <div id="'+folder+'-full" class="full-images row">\
-        <div class="'+folder+'-full image-container eight columns">\
-          <img class="full-image" src=' + full_path + ' width="100%">\
-        </div>\
-        <div class="four columns">\
-          <p class="'+folder+'-full full-text"></p>\
-        </div>\
+    // div with thumb and text
+    var new_element = document.createElement('div');
+    new_element.setAttribute('class', "full-images row");
+    new_element.setAttribute('id', folder+'-full');
+    new_element.innerHTML = '\
+      <div class="'+folder+'-full image-container eight columns">\
+        <img class="full-image" src=' + full_path + ' width="100%">\
+      </div>\
+      <div class="four columns">\
+        <p class="'+folder+'-full full-text"></p>\
       </div>\
     ';
 
@@ -105,7 +109,10 @@ function folder_loaders(root, folders) {
     while ( UrlExists(current_path) ) {
 
       // append those images to the div
-      var new_full = '<img class="full-image" src='+ current_path +' width="100%">';
+      var new_full = document.createElement("img");
+      new_full.setAttribute("class", "full-image");
+      new_full.setAttribute("src", current_path);
+      new_full.setAttribute("width", "100%");
 
       append_last("."+folder+"-full.image-container", new_full);
 
@@ -127,9 +134,12 @@ function folder_loaders(root, folders) {
     }
 
     // append back button
-    var back_button = '\
-      <a class="packaging-back-button" href="#" onclick="back_button()">back</a>\
-    ';
+    var back_button = document.createElement('a');
+    back_button.setAttribute("class", root+"-back-button");
+    back_button.setAttribute("href", "#");
+    back_button.setAttribute("onclick", "back_button()");
+    back_button.innterHTML = "back";
+
     append_last("."+folder+"-full.image-container", back_button);
 
   });
