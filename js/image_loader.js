@@ -169,5 +169,6 @@ function folder_loaders(root, folders) {
 document.addEventListener('DOMContentLoaded', function(){
 
   folder_loaders("packaging", imagesObj["packaging"]);
+  folder_loaders("posters", imagesObj["posters"]);
 
 });
