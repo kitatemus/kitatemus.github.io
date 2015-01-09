@@ -94,7 +94,7 @@ function folder_loaders(root, folders) {
       <div class="'+folder+'-full image-container eight columns">\
         <img class="full-image" src=' + full_path + ' width="100%">\
       </div>\
-      <div class="four columns">\
+      <div class="'+folder+'-full text-container four columns">\
         <p class="'+folder+'-full full-text"></p>\
       </div>\
     ';
@@ -142,7 +142,7 @@ function folder_loaders(root, folders) {
     back_button.setAttribute("onclick", "back_button()");
     back_button.innterHTML = "back";
 
-    append_last("."+folder+"-full.image-container", back_button);
+    append_last("."+folder+"-full.text-container", back_button);
 
   });
 }
