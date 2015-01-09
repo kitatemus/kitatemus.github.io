@@ -14,19 +14,37 @@ var imagesObj = {
 }
 
 // check if a url exists
-function UrlExists(url)
-{
+function UrlExists(url) {
     var http = new XMLHttpRequest();
     http.open('HEAD', url, false);
     http.send();
     return http.status!=404;
 }
 
+// function to select a thumbnail
+function select_thumb() {
+
+  // hide all the thumbnails
+  var thumbs = document.querySelectorAll(".thumbs.row.packaging");
+  Array.prototype.forEach.call(thumbs, function(e) {
+    e.style.display = 'none';
+  });
+
+  // show the image and text
+  document.querySelector("#"+this.id+"-full").style.display = '';
+
+  // change the location of the page
+  //TODO
+
+}
+
 // function to append element to last of a selection
 function append_last(selector, element) {
+
   var selection = document.querySelectorAll(selector);
   var last_selection = selection[selection.length - 1];
   last_selection.appendChild(element);
+
 }
 
 /* function to load images
@@ -54,7 +72,7 @@ function folder_loaders(root, folders) {
     new_element.setAttribute('id', folder+'-thumb');
     new_element.innerHTML = '\
       <a href="#">\
-        <img id="'+folder+'" class="thumb" src=' + thumb_path + ' width="100%">\
+        <img id="'+folder+'" class="thumb" src=' + thumb_path + ' onclick="select_thumb" width="100%">\
       </a>\
       <p class="'+folder+'-thumb alt-text"></p>\
     ';
@@ -148,19 +166,8 @@ function folder_loaders(root, folders) {
 }
 
 // when the document has been loaded
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function(){
 
   folder_loaders("packaging", imagesObj["packaging"]);
 
-  $(".full-images").hide();
-
-  // when you click on a thumb in a row
-  $("img.thumb").click(function() {
-    // hide all the thumbnails
-    $(".thumbs.row.packaging").hide();
-    // show the image and text
-    $("#"+this.id+"-full").show()
-    // change the location of the page
-    //TODO
-  });
 });
