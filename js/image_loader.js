@@ -25,7 +25,7 @@ function UrlExists(url) {
 function select_thumb(folder) {
 
   // hide all the thumbnails
-  var thumbs = document.querySelectorAll(".thumbs.row.packaging");
+  var thumbs = document.querySelectorAll(".thumbs.row");
   Array.prototype.forEach.call(thumbs, function(e) {
     e.style.display = 'none';
   });
