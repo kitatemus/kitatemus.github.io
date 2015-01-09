@@ -40,8 +40,5 @@ function nav_content_switcher(type) {
 
 // when the document has been loaded
 document.addEventListener('DOMContentLoaded', function(){
-
-  set_selector_display(".thumbs.row.posters", 'none');
-  set_selector_display("#about-me", 'none');
-
+  nav_content_switcher('posters')
 });
