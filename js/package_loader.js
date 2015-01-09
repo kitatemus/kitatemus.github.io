@@ -72,7 +72,7 @@ function folder_loaders(root, folders) {
     new_element.setAttribute('id', folder+'-thumb');
     new_element.innerHTML = '\
       <a href="#">\
-        <img id="'+folder+'" class="thumb" src=' + thumb_path + ' onclick="select_thumb" width="100%">\
+        <img id="'+folder+'" class="thumb" src=' + thumb_path + ' onclick="select_thumb()" width="100%">\
       </a>\
       <p class="'+folder+'-thumb alt-text"></p>\
     ';
