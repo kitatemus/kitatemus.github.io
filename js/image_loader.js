@@ -108,6 +108,9 @@ function folder_loaders(root, folders) {
     full_images_div.setAttribute('class', "full-images row");
     full_images_div.setAttribute('id', folder+'-full');
 
+    // append the div
+    append_last("#fulls", full_images_div);
+
     function newFullSection(folder, imageSrc, text_id) {
       var new_image_div = document.createElement('div');
       new_image_div.setAttribute('class', folder+"-full image-container eight columns");
@@ -142,9 +145,6 @@ function folder_loaders(root, folders) {
       current_img = current_img + 1;
       current_path = full_path_part + current_img + ".png";
     }
-
-    // append the div
-    append_last("#fulls", full_images_div);
 
     // load in the full_text
     var full_text;
