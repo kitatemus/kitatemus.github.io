@@ -100,6 +100,52 @@ function folder_loaders(root, folders) {
       append_last("#thumbnails", next_row)
     }
 
+    // get the info for the full page version
+    var full_path = "images-" + root + "/" + folder + "/full.png";
+    var full_text_path = "images-" + root + "/" + folder + "/full_text.txt";
+
+    var full_images_div = document.createElement('div');
+    full_images_div.setAttribute('class', "full-images row");
+    full_images_div.setAttribute('id', folder+'-full');
+
+    function newFullSection(folder, imageSrc, text_id) {
+      var new_image_div = document.createElement('div');
+      new_image_div.setAttribute('class', folder+"-full image-container eight columns");
+      new_image_div.innerHTML = '\
+        <img class="full-image" src=' + full_path + ' width="100%">\
+      ';
+
+      append_last('#'+folder+'-full', new_image_div);
+
+      var new_text_div = document.createElement('div');
+      new_text_div.setAttribute('class', folder+"-full text-container four columns");
+      new_text_div.innerHTML = '\
+        <p id='+text_id+' class="'+folder+'-full full-text"></p>\
+      ';
+
+      append_last('#'+folder+'-full', new_text_div);
+    }
+
+    newFullSection(folder, full_path, "text_block_0");
+
+    // try to pull in other images (e.g. full1.png, full2.png, etc...)
+    var full_path_part = "images-" + root + "/" + folder + "/full";
+    var current_img = 1;
+    var current_path = full_path_part + current_img + ".png";
+
+    // while we still have images to load
+    while ( UrlExists(current_path) ) {
+      // append those images (and text) to the div
+      newFullSection(folder, current_path, "text_block_"+current_img);
+
+      // bump up the image number
+      current_img = current_img + 1;
+      current_path = full_path_part + current_img + ".png";
+    }
+
+    // append the div
+    append_last("#fulls", full_images_div);
+
     // load in the full_text
     var full_text;
     var text_blocks;
@@ -112,58 +158,13 @@ function folder_loaders(root, folders) {
       if (this.readyState== 4 && this.status == 200){
         full_text = this.responseText;
         text_blocks = full_text.split(";");
+
+        Array.prototype.forEach.call(text_blocks, function(text, index) {
+          ele = document.querySelector("#text_block_"+index+"."+folder+"-full full-text");
+          ele.textContent = text;
+        });
       }
     }
-
-    // get the info for the full page version
-    var full_path = "images-" + root + "/" + folder + "/full.png";
-    var full_text_path = "images-" + root + "/" + folder + "/full_text.txt";
-
-    var full_images_div = document.createElement('div');
-    full_images_div.setAttribute('class', "full-images row");
-    full_images_div.setAttribute('id', folder+'-full');
-
-    function newFullSection(folder, imageSrc, text) {
-      var new_image_div = document.createElement('div');
-      new_image_div.setAttribute('class', folder+"-full image-container eight columns");
-      new_image_div.innerHTML = '\
-        <img class="full-image" src=' + full_path + ' width="100%">\
-      ';
-
-      append_last('#'+folder+'-full', new_image_div);
-
-      var new_text_div = document.createElement('div');
-      new_text_div.setAttribute('class', folder+"-full text-container four columns");
-      new_text_div.innerHTML = '\
-        <p class="'+folder+'-full full-text">'+text+'</p>\
-      ';
-
-      append_last('#'+folder+'-full', new_text_div);
-    }
-
-    newFullSection(folder, full_path, text_blocks[0]);
-
-    // try to pull in other images (e.g. full1.png, full2.png, etc...)
-    var full_path_part = "images-" + root + "/" + folder + "/full";
-    var current_img = 1;
-    var current_path = full_path_part + current_img + ".png";
-
-    // while we still have images to load
-    while ( UrlExists(current_path) ) {
-      // append those images (and text) to the div
-      var new_text = "";
-      if (text_blocks[current_img]) {
-        new_text = text_blocks[current_img];
-      }
-      newFullSection(folder, current_path, new_text);
-
-      // bump up the image number
-      current_img = current_img + 1;
-      current_path = full_path_part + current_img + ".png";
-    }
-
-    // append the div
-    append_last("#fulls", full_images_div);
 
     // append back button
     var back_button = document.createElement('a');
