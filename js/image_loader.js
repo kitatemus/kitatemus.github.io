@@ -155,7 +155,7 @@ function folder_loaders(root, folders) {
 
     // append back button
     var back_button = document.createElement('a');
-    back_button.setAttribute("class", root+"-back-button");
+    back_button.setAttribute("class", "back-button");
     back_button.setAttribute("href", "#");
     back_button.setAttribute("onclick", "back_button()");
     back_button.textContent = "back";
