@@ -102,18 +102,18 @@ function folder_loaders(root, folders) {
 
     // load in the full_text
     var full_text;
+    var text_blocks;
     var full_text_loader = new XMLHttpRequest();
     full_text_loader.open("GET",full_text_path,true);
     full_text_loader.send();
 
+    // load and prepare full text for multiple images
     full_text_loader.onreadystatechange = function() {
       if (this.readyState== 4 && this.status == 200){
         full_text = this.responseText;
+        text_blocks = full_text.split(";");
       }
     }
-
-    // prepare full text for multiple images
-    var text_blocks = full_text.split(";");
 
     // get the info for the full page version
     var full_path = "images-" + root + "/" + folder + "/full.png";
