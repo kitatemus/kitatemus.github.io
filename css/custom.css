@@ -3,18 +3,14 @@ li {
   width: 150px;
 }
 
-.back-button {
-  margin-top: 3%;
-}
-
 #header {
   padding-top: 3%;
   padding-left: 10%;
   margin-bottom: 15%;
 }
 
-#logo {
-
+p {
+  margin-bottom: 6rem;
 }
 
 #navigation {
