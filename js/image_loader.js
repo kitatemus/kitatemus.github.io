@@ -131,7 +131,7 @@ function folder_loaders(root, folders) {
         <p id='+text_id+' class="'+folder+'-full full-text"></p>\
       ';
 
-      append_last('#'+folder+'-full', new_text_div);
+      append_last('#'+folder+'-full .row', new_text_div);
     }
 
     newFullSection(folder, full_path, "text_block_0");
