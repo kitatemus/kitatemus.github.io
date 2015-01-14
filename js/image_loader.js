@@ -160,7 +160,7 @@ function folder_loaders(root, folders) {
         text_blocks = full_text.split(";");
 
         Array.prototype.forEach.call(text_blocks, function(text, index) {
-          ele = document.querySelector("#text_block_"+index+"."+folder+"-full full-text");
+          ele = document.querySelector("#text_block_"+index+"."+folder+"-full.full-text");
           ele.textContent = text;
         });
       }
