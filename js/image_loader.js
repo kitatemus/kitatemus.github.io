@@ -123,7 +123,7 @@ function folder_loaders(root, folders) {
         <img class="full-image" src=' + full_path + ' width="100%">\
       ';
 
-      append_last(folder+'-full .row', new_image_div);
+      append_last('#'+folder+'-full .row', new_image_div);
 
       var new_text_div = document.createElement('div');
       new_text_div.setAttribute('class', folder+"-full text-container four columns");
