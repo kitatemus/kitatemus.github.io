@@ -105,20 +105,25 @@ function folder_loaders(root, folders) {
     var full_text_path = "images-" + root + "/" + folder + "/full_text.txt";
 
     var full_images_div = document.createElement('div');
-    full_images_div.setAttribute('class', "full-images row");
+    full_images_div.setAttribute('class', "full-images");
     full_images_div.setAttribute('id', folder+'-full');
 
     // append the div
     append_last("#fulls", full_images_div);
 
     function newFullSection(folder, imageSrc, text_id) {
+      var new_row = document.createElement('div');
+      new_row.setAttribute('class', "row");
+
+      append_last('#'+folder+'-full', new_row);
+
       var new_image_div = document.createElement('div');
       new_image_div.setAttribute('class', folder+"-full image-container eight columns");
       new_image_div.innerHTML = '\
         <img class="full-image" src=' + full_path + ' width="100%">\
       ';
 
-      append_last('#'+folder+'-full', new_image_div);
+      append_last(folder+'-full .row', new_image_div);
 
       var new_text_div = document.createElement('div');
       new_text_div.setAttribute('class', folder+"-full text-container four columns");
