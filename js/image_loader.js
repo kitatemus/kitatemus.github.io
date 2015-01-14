@@ -157,7 +157,7 @@ function folder_loaders(root, folders) {
     full_text_loader.onreadystatechange = function() {
       if (this.readyState== 4 && this.status == 200){
         full_text = this.responseText;
-        text_blocks = full_text.split(";");
+        text_blocks = full_text.split("__");
 
         Array.prototype.forEach.call(text_blocks, function(text, index) {
           ele = document.querySelector("#text_block_"+index+"."+folder+"-full.full-text");
