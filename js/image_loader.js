@@ -120,7 +120,7 @@ function folder_loaders(root, folders) {
       var new_image_div = document.createElement('div');
       new_image_div.setAttribute('class', folder+"-full image-container eight columns");
       new_image_div.innerHTML = '\
-        <img class="full-image" src=' + full_path + ' width="100%">\
+        <img class="full-image" src=' + imageSrc + ' width="100%">\
       ';
 
       append_last('#'+folder+'-full .row', new_image_div);
