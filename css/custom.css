@@ -23,6 +23,10 @@ a {
   color: black;
 }
 
+a.menu-button {
+  padding-left: 20px;
+}
+
 #submit-form {
   padding-left: 33%;
 }
