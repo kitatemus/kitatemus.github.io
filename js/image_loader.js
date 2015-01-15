@@ -178,7 +178,7 @@ function folder_loaders(root, folders) {
       <div class="eight columns"></div>\
       <div class="four columns">\
         <a class="back-button" href="#" onclick="back_button()">back</a>\
-      </div>
+      </div>\
     ';
 
     append_last('#'+folder+'-full', back_button);
