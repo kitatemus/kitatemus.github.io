@@ -178,7 +178,7 @@ function folder_loaders(root, folders) {
     back_button.setAttribute("onclick", "back_button()");
     back_button.textContent = "back";
 
-    append_last("."+folder+"-full.text-container", back_button);
+    append_last('#'+folder+'-full', back_button);
 
   });
 }
