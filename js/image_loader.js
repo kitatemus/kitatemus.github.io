@@ -173,7 +173,7 @@ function folder_loaders(root, folders) {
 
     // append back button
     var back_button_div = document.createElement('div');
-    back_button_div.setAttributes('class', 'row');
+    back_button_div.setAttribute('class', 'row');
     back_button_div.innerHTML = '\
       <div class="eight columns"></div>\
       <div class="four columns">\
