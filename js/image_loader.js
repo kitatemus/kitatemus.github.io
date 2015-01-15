@@ -173,14 +173,15 @@ function folder_loaders(root, folders) {
 
     // append back button
     var back_button_div = document.createElement('div');
-    back_button_div.setAttribute('class', 'row');
+    back_button_div.setAttributes('class', 'row');
     back_button_div.innerHTML = '\
+      <div class="eight columns"><p></p></div>\
       <div class="four columns">\
-        <a class="back-button" href="#" style="{float: right;}"\ onclick="back_button()">back</a>\
-      </div>\
+        <a class="back-button" href="#" onclick="back_button()">back</a>\
+      </div>
     ';
 
-    append_last('#'+folder+'-full', back_button_div);
+    append_last('#'+folder+'-full', back_button);
 
   });
 }
