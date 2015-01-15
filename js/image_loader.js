@@ -181,7 +181,7 @@ function folder_loaders(root, folders) {
       </div>\
     ';
 
-    append_last('#'+folder+'-full', back_button);
+    append_last('#'+folder+'-full', back_button_div);
 
   });
 }
