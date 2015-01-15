@@ -175,9 +175,8 @@ function folder_loaders(root, folders) {
     var back_button_div = document.createElement('div');
     back_button_div.setAttribute('class', 'row');
     back_button_div.innerHTML = '\
-      <div class="eight columns"></div>\
       <div class="four columns">\
-        <a class="back-button" href="#" onclick="back_button()">back</a>\
+        <a class="back-button" href="#" style="{float: right;}"\ onclick="back_button()">back</a>\
       </div>\
     ';
 
