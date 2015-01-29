@@ -32,10 +32,6 @@ function select_thumb(folder) {
 
   // show the image and text
   document.querySelector("#"+folder+"-full").style.display = '';
-
-  // change the location of the page
-  //TODO
-
 }
 
 // function to append element to last of a selection
@@ -71,7 +67,7 @@ function folder_loaders(root, folders) {
     new_element.setAttribute('class', "three columns");
     new_element.setAttribute('id', folder+'-thumb');
     new_element.innerHTML = '\
-      <a href="#">\
+      <a href="#'+root+'#'+folder+'">\
         <img id="'+folder+'" class="thumb" src=' + thumb_path + ' onclick="select_thumb(\''+folder+'\')" width="100%">\
       </a>\
       <p class="'+folder+'-thumb alt-text"></p>\
@@ -177,7 +173,7 @@ function folder_loaders(root, folders) {
     back_button_div.innerHTML = '\
       <div class="eight columns"><p></p></div>\
       <div class="four columns">\
-        <a class="back-button" href="#" onclick="back_button()">back</a>\
+        <a class="back-button" href="#'+root+'" onclick="back_button()">back</a>\
       </div>\
     ';
 
