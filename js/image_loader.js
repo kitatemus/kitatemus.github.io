@@ -3,14 +3,14 @@ var imagesObj = {
   'packaging': ["wegmans",
                 "target",
                 "forge",
-                "dogtown"]
+                "dogtown"],
 
 
   'posters': ["america",
               "japan",
               "children",
               "black-metal",
-              "endless-nameless"]
+              "detroit"]
 }
 
 // check if a url exists
