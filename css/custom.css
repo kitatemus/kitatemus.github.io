@@ -18,6 +18,10 @@ p {
   padding-right: 13%;
 }
 
+.alt-text {
+  text-align: center;
+}
+
 a {
   text-decoration: none;
   color: black;
