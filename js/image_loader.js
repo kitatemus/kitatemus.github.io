@@ -1,8 +1,8 @@
 // image object that sets up folders
 var imagesObj = {
-  'packaging': ["wegmans",
+  'packaging': ["forge",
                 "target",
-                "forge",
+                "wegmans",
                 "dogtown"],
 
 
