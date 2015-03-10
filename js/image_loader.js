@@ -3,7 +3,6 @@ var imagesObj = {
   'packaging': ["forge",
                 "target",
                 "wegmans",
-                "classy",
                 "dogtown"],
 
 
