@@ -9,8 +9,7 @@ var imagesObj = {
   'posters': ["america",
               "japan",
               "children",
-              "black-metal",
-              "detroit"]
+              "black-metal"],
 }
 
 // check if a url exists
