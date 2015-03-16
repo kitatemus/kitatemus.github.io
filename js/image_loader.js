@@ -113,7 +113,7 @@ function folder_loaders(root, folders) {
       append_last('#'+folder+'-full', new_row);
 
       var new_image_div = document.createElement('div');
-      new_image_div.setAttribute('class', folder+"-full image-container nine columns");
+      new_image_div.setAttribute('class', folder+"-full image-container seven columns");
       new_image_div.innerHTML = '\
         <img class="full-image" src=' + imageSrc + ' width="100%">\
       ';
