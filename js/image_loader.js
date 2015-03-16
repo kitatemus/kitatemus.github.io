@@ -121,7 +121,7 @@ function folder_loaders(root, folders) {
       append_last('#'+folder+'-full .row', new_image_div);
 
       var new_text_div = document.createElement('div');
-      new_text_div.setAttribute('class', folder+"-full text-container four columns");
+      new_text_div.setAttribute('class', folder+"-full text-container five columns");
       new_text_div.innerHTML = '\
         <p id='+text_id+' class="'+folder+'-full full-text"></p>\
       ';
