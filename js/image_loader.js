@@ -6,11 +6,11 @@ var imagesObj = {
                 "dogtown"],
 
 
-  'posters': ["america",
-              "japan",
-              "children",
+  'posters': ["children",
+              "america",
               "black-metal",
-              "polish"],
+              "polish",
+              "japan"],
 }
 
 // check if a url exists
