@@ -59,7 +59,7 @@ function URL_Navigator(urlString) {
   var splitURL, folderURLIndex, folderURLTitle, imageURLTitle;
   splitURL = urlString.split("#");
   if (splitURL.length == 1) {
-    nav_content_switcher('packaging');
+    nav_content_switcher('posters');
   }
   folderURLIndex = elementSearch(['about-me', 'posters', 'packaging'], splitURL);
 
@@ -84,6 +84,6 @@ window.onhashchange = function(args) {
 
 // when the document has been loaded
 document.addEventListener('DOMContentLoaded', function(){
-  nav_content_switcher('packaging');
+  nav_content_switcher('posters');
   URL_Navigator(document.URL);
 });
