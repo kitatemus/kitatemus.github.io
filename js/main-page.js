@@ -18,10 +18,10 @@ function nav_content_switcher(type) {
     set_selector_display(".thumbs.row", 'none');
     set_selector_display(".full-images", 'none');
 
-    set_selector_display("#about-me", '');
+    set_selector_display("#about-me-container", '');
   }
   else {
-    set_selector_display("#about-me", 'none');
+    set_selector_display("#about-me-container", 'none');
     set_selector_display(".thumbs.row", 'none');
     set_selector_display(".full-images", 'none');
 
@@ -29,7 +29,7 @@ function nav_content_switcher(type) {
 
     // when a back button has been clicked
     back_button = function() {
-      set_selector_display("#about-me", 'none');
+      set_selector_display("#about-me-container", 'none');
       set_selector_display(".full-images", 'none');
 
       set_selector_display( ".thumbs.row."+type , '');
